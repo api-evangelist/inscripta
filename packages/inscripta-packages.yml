@@ -1,0 +1,54 @@
+generated: '2026-08-04'
+method: searched
+source: https://pypi.org/project/BioCantor/
+description: >-
+  First-party open-source software published by Inscripta, Inc. Inscripta ships no API
+  client SDK because it publishes no public API — the one first-party library found on
+  the public registries is BioCantor, an MIT-licensed Python genome-annotation /
+  coordinate-arithmetic library authored by Inscripta and hosted in the InscriptaLabs
+  GitHub organization. It is a bioinformatics library, NOT an API client, so no `SDKs`
+  pointer is emitted for it in apis.yml.
+registries_probed:
+  - registry: pypi
+    query: BioCantor
+    status: 200
+    result: hit
+  - registry: pypi
+    query: inscripta
+    status: 404
+    result: miss
+  - registry: npm
+    query: inscripta
+    status: 200
+    result: no first-party packages
+  - registry: crates.io
+    query: inscripta
+    status: 200
+    result: 0 crates
+  - registry: github
+    query: org:InscriptaLabs
+    status: 200
+    result: 2 public repos (BioCantor, cell_lib_eval_paper)
+packages:
+  - language: python
+    registry: pypi
+    name: BioCantor
+    url: https://pypi.org/project/BioCantor/
+    source: https://github.com/InscriptaLabs/BioCantor
+    install: pip install BioCantor
+    version: 0.4.5
+    license: MIT
+    author: Inscripta, Inc.
+    summary: Flexible feature arithmetic, seamlessly integrated with nested coordinate systems.
+    official: true
+    api_client: false
+    note: >-
+      Genomics/bioinformatics library, not a client for any Inscripta HTTP API. Last
+      pushed to GitHub 2023-10-06.
+x-evidence:
+  fetched: '2026-08-04'
+  urls:
+    - https://pypi.org/pypi/BioCantor/json
+    - https://api.github.com/orgs/InscriptaLabs/repos
+    - https://registry.npmjs.org/-/v1/search?text=inscripta
+    - https://crates.io/api/v1/crates?q=inscripta

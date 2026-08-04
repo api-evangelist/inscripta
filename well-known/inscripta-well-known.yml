@@ -1,0 +1,67 @@
+generated: '2026-08-04'
+method: probed
+host: https://www.inscripta.com
+result: none
+description: >-
+  No /.well-known/ discovery documents are published. www.inscripta.com is a Next.js
+  single-page merger landing site that answers HTTP 200 with the SAME 12,076-byte HTML
+  shell for EVERY path, including every /.well-known/* path. Each 200 below is therefore
+  a soft-404 (content-type text/html), not a real document, and none was saved. The
+  successor host www.manusbio.com returns hard 404s for the same paths. No WellKnown or
+  SecurityTxt pointer is wired into apis.yml, because nothing is genuinely present.
+soft_404: true
+soft_404_evidence:
+  shell_bytes: 12076
+  content_type: text/html; charset=utf-8
+  note: identical body returned for /openapi.json, /graphql and every /.well-known/* path
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /.well-known/agent.json
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /llms.txt
+    status: 200
+    present: false
+    reason: html-shell
+  - path: /robots.txt
+    status: 200
+    present: true
+    body: "User-Agent: *\nDisallow: /"
+    note: the site disallows all crawling
+successor_host:
+  host: https://www.manusbio.com
+  documents:
+    - {path: /.well-known/security.txt, status: 404, present: false}
+    - {path: /.well-known/agent-card.json, status: 404, present: false}
+    - {path: /.well-known/agent.json, status: 404, present: false}
+    - {path: /llms.txt, status: 404, present: false}
+    - {path: /openapi.json, status: 404, present: false}
+    - {path: /robots.txt, status: 200, present: true}
+    - {path: /sitemap.xml, status: 200, present: true}
+x-evidence:
+  fetched: '2026-08-04'
+  method: curl -sSL, status + content-type + byte-size recorded per path

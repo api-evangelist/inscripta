@@ -1,17 +1,38 @@
 aid: inscripta
 name: Inscripta
-description: 'Inscripta is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Inscripta, Inc. was a Boulder, Colorado digital genome engineering company
+  founded in 2015 that built the Onyx benchtop platform — an automated CRISPR instrument,
+  consumables, assays and a cloud-based Inscripta Engineering Portal that let scientists
+  design and track millions of precise single-cell genome edits in one experiment. It
+  licensed the MAD7 nuclease, acquired Infinome Biosciences and Sestina Bio in 2023 to
+  pivot toward sustainable biomanufacturing, and merged with Manus (Manus Bio) in April
+  2025 to form an end-to-end bioalternatives company. Inscripta publishes no public API,
+  developer portal, or machine-readable specification; its only public developer artifact
+  is BioCantor, an MIT-licensed Python genome-annotation library on PyPI and GitHub.
+  inscripta.com now serves a single merger landing page pointing at manusbio.com.'
 url: https://raw.githubusercontent.com/api-evangelist/inscripta/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/6536fe08e98c41581598326f/6682ee89aa355ed6e2dca105_Manus%20Social%20Image.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pipeline-2026-08-04
+x-status: merged
+x-successor: Manus (Manus Bio, Inc.)
+x-successor-url: https://www.manusbio.com/
+x-api-surface: none
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Biotechnology
+- Genome Engineering
+- Synthetic Biology
+- CRISPR
+- Life Sciences
+- Bioinformatics
+- Biomanufacturing
+- Laboratory Instruments
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,30 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/inscripta-domain-security.yml
 - type: Website
+  url: https://www.inscripta.com/
+- type: Successor
+  url: https://www.manusbio.com/
+- type: GitHubOrganization
+  url: https://github.com/InscriptaLabs
+- type: Blog
+  url: https://www.manusbio.com/insights-and-news
+- type: Support
+  url: https://www.manusbio.com/contact
+- type: SecondaryMarket
   url: https://forgeglobal.com/inscripta_stock/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/inscriptainc
+- type: SourceCode
+  url: https://github.com/InscriptaLabs/BioCantor
+- type: Packages
+  url: packages/inscripta-packages.yml
+- type: LLMsTxt
+  url: llms/inscripta-llms.txt
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
