@@ -20,7 +20,7 @@ x-status: merged
 x-successor: Manus (Manus Bio, Inc.)
 x-successor-url: https://www.manusbio.com/
 x-api-surface: none
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
