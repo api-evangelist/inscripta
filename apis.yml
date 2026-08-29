@@ -11,6 +11,18 @@ description: 'Inscripta, Inc. was a Boulder, Colorado digital genome engineering
   is BioCantor, an MIT-licensed Python genome-annotation library on PyPI and GitHub.
   inscripta.com now serves a single merger landing page pointing at manusbio.com.'
 url: https://raw.githubusercontent.com/api-evangelist/inscripta/refs/heads/main/apis.yml
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6536fe08e98c41581598326f/6682ee89aa355ed6e2dca105_Manus%20Social%20Image.png
 x-type: company
 x-source: harvest:secondary-market
